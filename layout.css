@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+html,
+body {
+    font-family: 'Bruno Ace SC', cursive;
+    line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --white: #FFFFFF;
+    --gray: #D1D1D1;
+    --gray20: #E3E3E3;
+    --black: #000000;
+    --green: #00FFA3;
+    --liner: linear-gradient(#050014, rgba(1, 2, 30, 0.89));
+}
+
+
+h1 {
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.fs-1 {
+    font-size: 32px;
+}
+
+.fs-2 {
+    font-size: 24px;
+}
+
+.fs-3 {
+    font-size: 20px;
+}
+
+.max-width {
+    max-width: 1296px;
+    margin: auto;
+}
+
+.bg-black {
+    background: var(--black);
+}
+
+.bg-white {
+    background: var(--white);
+}
+
+/* header */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 40px;
+    color: var(--gray);
+}
+
+.navItem {
+    width: 306px;
+}
+
+.navItem:nth-last-of-type(1) {
+    width: 196px;
+    text-align: right;
+}
+
+/* banner */
+.bannerList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.bannertImg {
+    margin-right: 24px;
+}
+
+.bannerText {
+    color: var(--white);
+}
+
+.bannerTitle {
+    text-align: right;
+    color: var(--green);
+}
+
+.bannerBtn {
+    text-align: right;
+}
+
+.btn {
+    padding: 12px 24px;
+    color: var(--black);
+    border-radius: 32px;
+    margin: 0 auto;
+    background: var(--white);
+}
+
+.btnText {
+    margin-right: 4px;
+}
+
+/* .btn img {
+    vertical-align: text-bottom;
+} */
+
+/* introduction */
+.bg-img {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.introductionList {
+    display: flex;
+    align-items: stretch;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.introductionText {
+    max-width: 526px;
+    color: var(--white);
+}
+
+/* img圖與圖之間不能換行，換行會出現間距 */
+.introductionImg img {
+    margin-left: 24px;
+}
+
+.itemText {
+    margin-top: 36px;
+}
+
+.itemImg {
+    margin-top: 32px;
+}
+
+.itemImg img {
+    margin-right: 16px;
+}
+
+/* about */
+.aboutList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.aboutText {
+    max-width: 526px;
+}
+
+.aboutCard {
+    display: grid;
+    max-width: 636px;
+    grid-template-columns: 306px 306px;
+    gap: 24px;
+}
+
+.cardItem {
+    padding: 16px;
+    border: 1px solid var(--gray20);
+    box-shadow: 4px 4px 4px #f7f7f7;
+}
+
+.margin-bottom {
+    margin-bottom: 4px;
+}
+
+/* contact */
+.bg-liner {
+    background: var(--liner);
+}
+
+.contactList {
+    color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.contactTest span {
+    margin-right: 16px;
+}
+
+.contactImg a {
+    width: 162px;
+    height: auto;
+    margin-left: 20px;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.contactImg a:hover {
+    box-shadow: 0 4px 4px #9094FF, 0px 0px 16px  #9094ffcc;
+}
+
+/*  */
+.projectList {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.projectTitle {
+    margin-left: 110px;
+    margin-bottom: 16px;
+}
+
+.margin-right {
+    margin-right: 24px;
+}
+
+.projectText {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.projectText p {
+    max-width: 636px;
+}
+
+.marginTop {
+    display: inline-block;
+    margin-top: 76px;
+}
+
+.projectBtn {
+    padding: 12px 24px;
+    color: var(--white);
+    border-radius: 32px;
+    background: var(--black);
+}
+
+/* footer */
+.footerList {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: var(--white);
+}

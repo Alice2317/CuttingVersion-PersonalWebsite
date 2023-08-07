@@ -6,12 +6,6 @@ body {
     line-height: 1.5;
 }
 
-*,
-*::after,
-*::before {
-    /* outline: 1px solid red; */
-}
-
 :root {
     --white: #FFFFFF;
     --gray: #D1D1D1;
@@ -77,6 +71,10 @@ h3 {
     text-align: right;
 }
 
+.navItem a:hover {
+    text-decoration: underline;
+}
+
 /* banner */
 .bannerList {
     display: flex;
@@ -115,9 +113,9 @@ h3 {
     margin-right: 4px;
 }
 
-/* .btn img {
-    vertical-align: text-bottom;
-} */
+.btn:hover {
+    box-shadow: 0 0px 3px #9094ffcc, 0px 4px 5px #9094FF;
+}
 
 /* introduction */
 .bg-img {
@@ -125,21 +123,25 @@ h3 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-.introductionList {
-    display: flex;
-    align-items: stretch;
     padding-top: 160px;
     padding-bottom: 160px;
 }
 
+.introductionList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .introductionText {
-    max-width: 526px;
     color: var(--white);
 }
 
 /* img圖與圖之間不能換行，換行會出現間距 */
+.introductionImg {
+    display: flex;
+}
+
 .introductionImg img {
     margin-left: 24px;
 }
@@ -172,7 +174,7 @@ h3 {
 .aboutCard {
     display: grid;
     max-width: 636px;
-    grid-template-columns: 306px 306px;
+    grid-template-columns: auto auto;
     gap: 24px;
 }
 
@@ -204,25 +206,32 @@ h3 {
     margin-right: 16px;
 }
 
+.contactImg {
+    display: flex;
+}
+
 .contactImg a {
-    width: 162px;
+    max-width: 162px;
     height: auto;
     margin-left: 20px;
-    display: inline-block;
     border-radius: 30px;
 }
 
 .contactImg a:hover {
-    box-shadow: 0 4px 4px #9094FF, 0px 0px 16px  #9094ffcc;
+    box-shadow: 0 4px 4px #9094FF, 0px 0px 16px #9094ffcc;
 }
 
-/*  */
+/* project */
 .projectList {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
     padding-top: 160px;
     padding-bottom: 160px;
+}
+
+.projectItem {
+    margin-right: 24px;
 }
 
 .projectTitle {
@@ -230,31 +239,38 @@ h3 {
     margin-bottom: 16px;
 }
 
-.margin-right {
-    margin-right: 24px;
-}
 
 .projectText {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
     margin-bottom: 24px;
+}
+
+.projectTextItem {
+    margin-left: 24px;
 }
 
 .projectText p {
     max-width: 636px;
 }
 
-.marginTop {
-    display: inline-block;
-    margin-top: 76px;
+.projectImg {
+    display: flex;
+}
+
+.projectImg img:nth-of-type(1) {
+    margin-right: 24px;
 }
 
 .projectBtn {
+    margin-top: 76px;
     padding: 12px 24px;
     color: var(--white);
     border-radius: 32px;
     background: var(--black);
+}
+
+.projectBtn:hover {
+    box-shadow: 0 0px 3px #9094ffcc, 0px 4px 5px #9094FF;
 }
 
 /* footer */
@@ -263,4 +279,101 @@ h3 {
     padding-top: 40px;
     padding-bottom: 40px;
     color: var(--white);
+}
+
+@media screen and (max-width:1300px) {
+
+    .nav,
+    .bannerList,
+    .contactList {
+        flex-direction: column;
+    }
+
+    .navItem:nth-last-of-type(1) {
+        text-align: initial;
+    }
+
+    .max-width {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .introductionImg,
+    .projectItem {
+        display: none;
+    }
+
+    .aboutList {
+        flex-direction: column-reverse;
+    }
+
+    .aboutText,
+    .contactTest {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    h1 {
+        font-size: 100px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .projectImg {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .aboutCard {
+        display: grid;
+        max-width: 636px;
+        grid-template-columns: auto;
+        gap: 24px;
+    }
+
+    .contactTest span {
+        margin-right: initial;
+    }
+
+    .projectTitle {
+        margin-left: initial;
+        margin-bottom: 16px;
+    }
+
+    .projectText {
+        flex-direction: column-reverse;
+    }
+
+    .projectTextItem {
+        margin-left: initial;
+    }
+
+    .projectBtn {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 12px 24px;
+        color: var(--white);
+        border-radius: 32px;
+        background: var(--black);
+    }
 }

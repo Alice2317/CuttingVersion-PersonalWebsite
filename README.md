@@ -2,4 +2,4 @@
 
 此為虛擬商家，純切版
 
-gitHub Pages:https://alice2317.github.io/CuttingVersion-PersonalWebsite/
+gitHub Pages:https://alice2317.github.io/CSS-PersonalWebsite/
